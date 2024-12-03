@@ -4,6 +4,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
