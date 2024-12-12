@@ -1,6 +1,10 @@
 import type { FC } from 'react';
 
-interface pageProps {}
+interface pageProps {
+  params: {
+    id?: string;
+  };
+}
 
 const page: FC<pageProps> = ({}: pageProps) => {
   return (
