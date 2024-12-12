@@ -2,7 +2,6 @@
 
 import type { FC } from 'react';
 import React from 'react';
-import ServerComponentCopy from './serverComponentCopy';
 
 interface clientComponentProps {
   children?: React.ReactNode;
