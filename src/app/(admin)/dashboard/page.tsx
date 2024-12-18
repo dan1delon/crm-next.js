@@ -1,3 +1,4 @@
+import Header from '@/app/components/header';
 import type { FC } from 'react';
 
 interface pageProps {
@@ -9,7 +10,7 @@ interface pageProps {
 const page: FC<pageProps> = ({}: pageProps) => {
   return (
     <main>
-      <h1 className="text-xl">Dashboard Page</h1>
+      <Header>Dashboard</Header>
     </main>
   );
 };
