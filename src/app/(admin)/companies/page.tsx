@@ -1,37 +1,24 @@
-import type { FC } from 'react';
-import Header from '../../components/header';
-import Toolbar from '../../components/toolbar';
-import SearchInput from '../../components/searchInput';
-import AddCompanyBtn from '../../components/addCompanyBtn';
-import CompanyTable from '../../components/companyTable';
-import CompanyRow from '../../components/companyRow';
-import { Status } from '../../components/status-label';
+import React from 'react';
+import CompanyTable from '@/app/components/companyTable';
+import CompanyRow from '@/app/components/companyRow';
+import { Status } from '@/app/components/status-label';
 
-interface pageProps {
-  params: {
-    id?: string;
-  };
+export interface PageProps {
+  children: React.ReactNode;
 }
 
-const page: FC<pageProps> = ({}: pageProps) => {
+export default function Page({}: PageProps) {
   return (
-    <>
-      <Header>Companies Page</Header>
-      <Toolbar action={<AddCompanyBtn />}>
-        <SearchInput />
-      </Toolbar>
-      <CompanyTable>
-        <CompanyRow
-          id={1}
-          category={'Products'}
-          company={'Costco'}
-          status={Status.Pending}
-          promotion={true}
-          country={'USA'}
-          joinedDate={'2022-12-12'}
-        />
-      </CompanyTable>
-    </>
+    <CompanyTable>
+      <CompanyRow
+        id={1}
+        category="Products"
+        company="Costco"
+        status={Status.Pending}
+        promotion={true}
+        country="USA"
+        joinedDate="02.19.2023"
+      />
+    </CompanyTable>
   );
-};
-export default page;
+}
